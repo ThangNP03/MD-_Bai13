@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyễn tố</title>
+</head>
+<body>
+    <div>
+        <p id ="output"></p>
+        <input type ="text" id = "number">
+        <button onclick="isPrime()">Check Số nguyên tố</button>
+    </div>
+<script>
+    function isPrime() {
+        let number = +document.getElementById('number').value
+        if (number < 2) {
+        } else if (number > 2) {
+            let isPrime = false;
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    isPrime = true;
+                    break;
+                }
+            }
+            if (!isPrime) {
+                document.getElementById('output').innerHTML = "ĐÂY LÀ SỐ NGUYÊN TỐ"
+            } else {
+                document.getElementById('output').innerHTML = "KHOOGN PHẢI SỐ NGUYÊN TỐ "
+            }
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

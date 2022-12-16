@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập Hàm 01</title>
+</head>
+<body>
+ <button onclick="ok()">Practice 1</button>
+ <button onclick="practice2()">Practice 2</button>
+ <button onclick="practice3()">Practice 3</button>
+ <button onclick="practice4()">practice 4</button>
+ <button onclick="practice5()">practice 5</button>
+<script>
+    // Start practice 5
+    function practice5() {
+        let arrayA =['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus']
+        let arrayB= ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo']
+       let list = arrayA.concat(arrayB);
+        console.log(list)
+        let  chain = prompt('Mời nhập chữ muốn tìm  ','' )
+        if (chain === ""){
+            return alert('Mời nhập lại')
+        }
+        else {
+            for(let i = 0 ; i < list.length; i ++){
+                if(list.includes(chain) == true){
+                    alert(chain)
+                    break;
+            } else {
+                    alert('Không có  ngôi sao ' +chain  )
+                    break;
+                }
+        }
+
+    }}
+    // Start practice 5
+
+    // Start practice 4
+    function practice4() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        alert(firstNum)
+        alert(secondNum)
+        return alert(result);
+    }
+    result = 0;
+    result = practice4();
+
+
+    // Start practice 4
+
+    // Start practice 3
+    function practice3(numberA,numberB) {
+        numberA = parseInt(prompt('Mời nhập vào số  A '));
+        numberB = parseInt(prompt('Mời nhập vào số B '));
+        if (numberA > numberB|| numberA==numberB){;
+            +document.write(numberA + numberB );
+        }
+        else {
+            let result = "Số " + numberA +" > "+ numberB;
+            return alert(result);
+        }
+    }
+    // Start practice 3
+
+    // Start practice 2
+    function practice2(number) {
+        number = parseInt(prompt('Mời nhập vào số '))
+        return alert(1 + number)
+    }
+
+    // Start practice 2
+
+    // Start practice 1
+    function ok( ) {
+     let alertMessage = "Xin chào"
+     return alert(alertMessage);
+     }
+     //End practice 1
+</script>
+</body>
+</html>

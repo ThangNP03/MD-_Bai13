@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi từ Foot sang Meter</title>
+</head>
+<body>
+<h2>Chuyển đổi giữa feet và meters</h2>
+<input type="text" id="input">
+<select id="luachon">
+    <option value="feet">Feet</option>
+    <option value="meter">Meter</option>
+</select>
+<input type="button" id="convert" value="check" onclick="convert()">
+<p id="check"></p>
+<script>
+    function convert() {
+        let luachon = document.getElementById('luachon').value
+        let input = document.getElementById('input').value
+        let check = 0
+
+        if (luachon == "feet") {
+            check = changeFeetToMeter(input)
+            document.getElementById('check').innerHTML = "Kết quả  = " + check + " meter"
+        } else {
+            check = changeMeterToFeet(input)
+            document.getElementById('check').innerHTML = "Kết quả = " + check + " feet"
+        }
+    }
+
+    function changeFeetToMeter(feet) {
+        let meter = 0.305 * feet
+        return meter
+    }
+
+    function changeMeterToFeet(meter) {
+        let feet = 3.279 * meter
+        return feet
+    }
+</script>
+</body>
+</html>
